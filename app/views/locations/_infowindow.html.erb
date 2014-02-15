@@ -1,0 +1,5 @@
+<h1><%= location.title %></h1>
+<% if  !location.photo.blank?%>
+<%= image_tag location.photo.url(:thumb) %> 
+<%end%>
+<h2><%= location.address%></h2>

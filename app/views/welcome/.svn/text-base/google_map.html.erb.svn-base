@@ -1,0 +1,75 @@
+<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key='AIzaSyCzSDQQrKyyuHrT23GwHYytqWhRGdjgKPE'"></script>
+<script type="text/javascript" src="/js/jquery.gmap-1.1.0-min.js"></script>
+<div id="map" width='400px' height='400px'></div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+ var  options = 
+{
+    latitude:               47.58969,
+    longitude:              9.473413,
+    zoom:                   10,
+    markers:                [{latitude: 47.670553, longitude: 9.588479, icon:
+    {
+        image:              "/assets/rails.png",
+        shadow:             false,
+        iconsize:           [19, 21],
+        shadowsize:         false,
+        iconanchor:         [4, 19],
+        infowindowanchor:   [8, 2]
+    }
+    ,html: "Tettnang, Germany"},
+                             {latitude: 47.65197522925437, longitude: 9.47845458984375,icon:
+    {
+        image:              "/assets/rails.png",
+        shadow:             false,
+        iconsize:           [19, 21],
+        shadowsize:         false,
+        iconanchor:         [4, 19],
+        infowindowanchor:   [8, 2]
+    }, html: "Friedrichshafen, Germany"}],
+    controls:               ["GSmallMapControl", "GMapTypeControl"],
+    scrollwheel:            false,
+    maptype:                G_NORMAL_MAP,
+    html_prepend:           '<div class="gmap_marker">',
+    html_append:            '</div>',
+    icon:
+    {
+        image:              "/assets/rails.png",
+        shadow:             false,
+        iconsize:           [19, 21],
+        shadowsize:         false,
+        iconanchor:         [4, 19],
+        infowindowanchor:   [8, 2]
+    }
+};
+var options2 = 
+{ controls: false,
+                  scrollwheel: false,
+                  markers: [{ latitude: 47.670553,
+                              longitude: 9.588479,
+                              html: "The place I live",
+                              icon: { image: "/assets/asc.png",
+                                      iconsize: [26, 46],
+                                      iconanchor: [12,46],
+                                      infowindowanchor: [12, 0] } },
+                            { latitude: 47.65197522925437,
+                              longitude: 9.47845458984375 },
+                            { latitude: 47.594996,
+                              longitude: 9.600708,
+                              html: "The place I live abc",
+                              icon: { image: "/assets/rails.png",
+                                      iconsize: [26, 46],
+                                      iconanchor: [12,46],
+                                      infowindowanchor: [12, 0] } }],
+                  icon: { image: "/assets/rails.png", 
+                          iconsize: [26, 46],
+                          iconanchor: [12, 46],
+                          infowindowanchor: [12, 0] },
+                  latitude: 47.58969,
+                  longitude: 9.473413,
+                  zoom: 10 }
+
+    $("#map").gMap(options);
+});
+</script>

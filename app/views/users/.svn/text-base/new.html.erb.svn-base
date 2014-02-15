@@ -1,0 +1,17 @@
+<div class="innermain">
+  <div class="innerwrap">
+    <div class="contentmain">
+      <h1>Register</h1>
+      <h2>Please register free to add your own pins or comment on other users pins.</h2>
+      <div class="contactleft">
+        <%= form_for @user do |f| %>
+          <%= render :partial => "form", :object => f, :locals => { :user => @user } %>
+          <div class="formrow subbordernone"><label>&nbsp;</label><%= f.submit "Register" %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

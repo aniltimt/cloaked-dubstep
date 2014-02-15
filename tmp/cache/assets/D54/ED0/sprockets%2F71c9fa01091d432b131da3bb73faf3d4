@@ -1,0 +1,38 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1376285920.8141878:@value{	I"length:EFiI"digest;
+F"%94a6b35b3919b2479c81cae511513287I"source;
+FI"/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+
+ 
+.map_container {
+  padding: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 100%;
+}
+
+
+  .gmaps4rails_map {
+  width: 100%;
+  height: 650px;
+}
+
+
+.bing_map {
+   position: absolute;
+   top: 20;
+   left: 10;
+   width: 400px;
+   height: 400px;
+   border:#555555 2px solid;
+}
+;
+FI"_version;
+F"%801aa40b7081d425447b87fa793cbbda

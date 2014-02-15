@@ -1,0 +1,22 @@
+<div class="innermain">
+  <div class="innerwrap">
+    <div class="contentmain">
+      <h1>Category Details</h1>
+      <div class="contactleft">
+        <p>
+          <b>Name:</b>
+          <%= @category.name %>
+        </p>
+        <p>
+          <b>Parent category:</b>
+          <%= @category.parent_category.name if !@category.parent_category.blank?%>
+        </p>
+        <p>
+          <b>Photo :</b>
+          <%= image_tag @category.photo.url(:small) %>
+        </p>
+        <%= link_to 'Listing categories', categories_path %>
+      </div>
+    </div>
+  </div>
+</div>

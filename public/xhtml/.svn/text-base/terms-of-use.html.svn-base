@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ziparama</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script>
+	
+	$(document).ready(function () {
+		
+		$('#accordion a.item').click(function () {
+
+			//slideup or hide all the Submenu
+			$('#accordion li').children('ul').slideUp('fast');	
+			
+			//remove all the "Over" class, so that the arrow reset to default
+			$('#accordion a.item').each(function () {
+				if ($(this).attr('rel')!='') {
+					$(this).removeClass($(this).attr('rel') + 'Over');	
+				}
+			});
+			
+			//show the selected submenu
+			$(this).siblings('ul').slideDown('fast');
+			
+			//add "Over" class, so that the arrow pointing down
+			$(this).addClass($(this).attr('rel') + 'Over');			
+
+			return false;
+
+		});
+	
+	});
+	
+	</script>
+</head>
+
+<body>
+
+
+<div class="navigation">
+<div class="ziplogoleft"><a href="#" title="Ziparama"><img src="images/ziplogo1.png" border="0" alt="" /></a></div>
+<div class="nav">
+<ul>
+<li><a href="#">HOW&nbsp;IT&nbsp;WORKS</a></li>
+<li><a href="#">VIEW&nbsp;MAP</a></li>
+<li><a href="#">FAQ'S</a></li>
+<li><a href="#" class="active">TERMS&nbsp;OF&nbsp;USE</a></li>
+<li><a href="#">CONTACT&nbsp;US</a></li>
+</ul>
+</div>
+<div class="social">
+<a href="#"><img src="images/googleplay.png" border="0" alt="" /></a>
+<a href="#"><img src="images/facebook.png" border="0" alt="" /></a>
+<a href="#"><img src="images/twitter.png" border="0" alt="" /></a>
+<a href="#"><img src="images/linkedin.png" border="0" alt="" /></a>
+<a href="#"><img src="images/space.png" border="0" alt="" /></a>
+<a href="#"><img src="images/youtube.png" border="0" alt="" /></a>
+</div>
+</div>
+
+<div class="innermain">
+<div class="innerwrap">
+<div class="contentmain">
+<h1>TERMS OF USE</h1>
+<h2>Acceptance</h2>
+<p>Ziparama is a service of Nicholls Technologies Pty Ltd (the “Company”). By using the Company website and free or paid services (the “Services”), you are agreeing to be bound by the following terms and conditions (“Terms of Use”) and the following Privacy Policy. If you do not agree to these Terms of Use, or any modification thereto, or become dissatisfied with the Company in any way, then please discontinue use of the Services.</p>
+<p>The Terms of Use may be revised periodically and this will be reflected by the last updated date at the top of the Terms and Conditions of Use web page. Please revisit this page to stay aware of any changes. Your continued use of the Services constitutes your agreement to the Terms of Use and any future revisions.</p>
+<h2>Age Limits</h2>
+<p>You must be 13 years and older to use the Services. By using the Services you hereby represent that you are at least 13 years old.</p>
+<h2>Our ability to contact you</h2>
+<p>By using the Services and providing us with your email address you are allowing us to contact you in connection with the Services and in order to provide the Services to you. We make every effort to avoid sending unwanted email and we provide several mechanisms for you to request that we stop emailing you. Please email info@ziparama.cm if you are still receiving emails from us and would like us to stop contacting you.</p>
+<h2>Pin Limits</h2>
+<p>We offer our service with a maximum allowance of 30 pin placements per month. If you exceed this threshold we will endeavour to contact you via email to discuss your needs and us continuing to provide the service to you.</p>
+<h2> 3rd Party Websites</h2>
+<p>The Services may contain links to third party websites that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites. In addition, the Company will not and cannot censor or edit the content of any third-party site. By using the Services, you expressly relieve the Company from any and all liability arising from your use of any third-party website. Accordingly, the Company encourages you to be aware when you leave the Services and to read the terms and conditions and privacy policy of each other website that you visit.</p>
+<h2>Content</h2>
+<p>The Company owns the statistical data tracked on our website (“Data”) by using the Services. The Company may obtain samples of your content displayed on your site (“User Content”) and republish it through the Services. You hereby grant the Company a worldwide, non-exclusive, royalty-free, sublicenseable and transferable license to use, reproduce, distribute, prepare derivative works of and display the User Content in connection with the Services.</p>
+<p>The Company does not endorse any User Content or any opinion, recommendation, or advice expressed therein, and the Company expressly disclaims any and all liability in connection with User Content. The Company does not permit copyright infringing activities and infringement of intellectual property rights on its website, and the Company will remove all User Content if properly notified that such User Content infringes on another’s intellectual property rights. The Company reserves the right to remove User Content without prior notice and to terminate the Services if they engage in copyright infringing activities.</p>
+<h2>Acceptance</h2>
+<p>Ziparama is a service of Nicholls Technologies Pty Ltd (the “Company”). By using the Company website and free or paid services (the “Services”), you are agreeing to be bound by the following terms and conditions (“Terms of Use”) and the following Privacy Policy. If you do not agree to these Terms of Use, or any modification thereto, or become dissatisfied with the Company in any way, then please discontinue use of the Services.</p>
+<p>The Terms of Use may be revised periodically and this will be reflected by the last updated date at the top of the Terms and Conditions of Use web page. Please revisit this page to stay aware of any changes. Your continued use of the Services constitutes your agreement to the Terms of Use and any future revisions.</p>
+<h2>Age Limits</h2>
+<p>You must be 13 years and older to use the Services. By using the Services you hereby represent that you are at least 13 years old.</p>
+<h2>Our ability to contact you</h2>
+<p>By using the Services and providing us with your email address you are allowing us to contact you in connection with the Services and in order to provide the Services to you. We make every effort to avoid sending unwanted email and we provide several mechanisms for you to request that we stop emailing you. Please email info@ziparama.cm if you are still receiving emails from us and would like us to stop contacting you.</p>
+<h2>Pin Limits</h2>
+<p>We offer our service with a maximum allowance of 30 pin placements per month. If you exceed this threshold we will endeavour to contact you via email to discuss your needs and us continuing to provide the service to you.</p>
+<h2> 3rd Party Websites</h2>
+<p>The Services may contain links to third party websites that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites. In addition, the Company will not and cannot censor or edit the content of any third-party site. By using the Services, you expressly relieve the Company from any and all liability arising from your use of any third-party website. Accordingly, the Company encourages you to be aware when you leave the Services and to read the terms and conditions and privacy policy of each other website that you visit.</p>
+<h2>Content</h2>
+<p>The Company owns the statistical data tracked on our website (“Data”) by using the Services. The Company may obtain samples of your content displayed on your site (“User Content”) and republish it through the Services. You hereby grant the Company a worldwide, non-exclusive, royalty-free, sublicenseable and transferable license to use, reproduce, distribute, prepare derivative works of and display the User Content in connection with the Services.</p>
+<p>The Company does not endorse any User Content or any opinion, recommendation, or advice expressed therein, and the Company expressly disclaims any and all liability in connection with User Content. The Company does not permit copyright infringing activities and infringement of intellectual property rights on its website, and the Company will remove all User Content if properly notified that such User Content infringes on another’s intellectual property rights. The Company reserves the right to remove User Content without prior notice and to terminate the Services if they engage in copyright infringing activities.</p>
+
+
+</div>
+</div>
+</div>
+<div class="footlink">Copyright © 2013 All Rights Reserved. www.ziparama.com | <a href="#">Terms of use</a>  | Site designed & developed by <a href="#">SofteElixir</a></div>
+
+</body>
+</html>

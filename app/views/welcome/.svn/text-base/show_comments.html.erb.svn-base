@@ -1,0 +1,26 @@
+<h1>Comments</h1>
+<table>
+  <%for comment in @coments%>
+    <tr class="<%= cycle("comments-block-odd", "comments-block-even") -%>">
+	  <td style = "width:250px;">
+	  	<p style="padding-top: 3px;"><%=comment.user_comment%></p>
+		<p style="padding-top: 3px;text-align: right;">BY: <%=User.find(comment.user_id).login%></p>
+		<p style="padding-top: 3px;text-align: right;margin-right: -38px;">On:<%=comment.created_at.strftime(" %d/%m/%Y")%></p>
+	  </td>
+	</tr>
+  <%end%>
+</table>
+<br />
+<%if !current_user.blank?%>
+  <%= render :partial => "comment_box_script"  %>
+  <%= form_tag({:controller=>'comment',:action=>'create'},:id=>"submit_comment") do %>
+	<%= text_field_tag 'comment_text'%>&nbsp;&nbsp;<%= image_tag "/images/comment.png" ,:id => 'post_data'%>
+	<p class="errorMsgLeft_comment_text"></p>
+	<%= hidden_field_tag 'u_id', current_user.id %>
+	<%= hidden_field_tag 'pin_id', @pin %>
+    <br />
+  <% end %>
+<%else%>
+  <%= button_to "Login to add comments",:controller=>'user_sessions', :action => "new" %>
+<%end%>
+

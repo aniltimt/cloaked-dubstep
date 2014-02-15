@@ -1,0 +1,79 @@
+
+<div class="innermain">
+  <div class="innerwrap">
+    <div class="contentmainnew" id ="map_update_div" style="margin-top: 0px;height: 550px;" >
+      <h1><%= @location.title %></h1>
+      <div class="contactleft">
+        <table style="width: 100%;">
+          <tr>
+            <th style="text-align:left;" ></th>
+            <th></th>
+            
+          </tr>
+          
+            <tr>
+              <td><% if  !@location.photo.blank?%>
+          <%= image_tag @location.photo.url(:thumb) %> 
+        <%end%></td>
+              <td>&nbsp;</td>
+              </tr>
+          
+        </table>
+      </div>
+      <a href="http://ipligence.com"><img src="http://www.ipligence.com/freetools/iplocation/b1/" alt="geolocation database" /></a>
+      <h1>Drag pin to change location.</h1>
+        <%= gmaps(:markers => {:data => @json, :options => { :draggable => true ,:raw => '{ animation: google.maps.Animation.DROP }' } },:map_options => { :type => 'HYBRID',:auto_adjust => false, :auto_zoom => false, :zoom => 5,:raw => '{ disableDefaultUI: false,draggable: true, scrollwheel: true,disableDoubleClickZoom: true, zoomControl: true,zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, scaleControl: true, panControl  :true, panControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER} ,streetViewControl:true}' }) %>
+      
+    </div>
+    
+  </div>
+</div>
+ 
+ 
+<% content_for :scripts do %>
+<script type="text/javascript" charset="utf-8">
+
+Gmaps.map.HandleDragend = function(pos,title) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({
+    latLng: pos
+  }, function(responses) {
+    if (responses && responses.length > 0) {
+      //alert(responses[0].formatted_address);
+      var latitude = pos.lat();
+      var longitude = pos.lng();      
+      var address = responses[0].formatted_address
+      $.ajax({
+        type: "PUT",
+        url: "/locations/update/" + title +"?dynamic=1&longitude=" + longitude + '&latitude=' + latitude + '&address=' + address,
+        success: function() {
+          //alert('location updated');
+        },    
+      });
+    } else {
+      alert('Cannot determine address at this location.');
+    }
+  });
+};
+function placeMarker(latLng) {
+  var marker = new google.maps.Marker({
+    position: latLng, 
+    map: Gmaps.map.serviceObject,
+    draggable: true
+  });
+  // Listen to drag & drop
+  google.maps.event.addListener(marker, 'dragend', function() { Gmaps.map.HandleDragend(this.getPosition(),$("#object_id_location").val()) });
+  }
+Gmaps.map.callback = function() {
+  for (var i = 0; i <  this.markers.length; ++i) {
+     google.maps.event.addListener(Gmaps.map.markers[i].serviceObject, 'dragend', function() { Gmaps.map.HandleDragend(this.getPosition(),this.title) });
+  }
+  // On double click,place a new marker on map , create enrty in  database
+  setTimeout(function() {
+          var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(<%= @location.latitude + 10 %>,<%= @location.longitude - 15 %>));
+          Gmaps.map.serviceObject.panToBounds(bounds);
+       }, 50);
+};        
+</script>
+<% end %>
+

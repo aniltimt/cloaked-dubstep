@@ -1,0 +1,71 @@
+<div class="search-box" style="margin-top: 0px;height: 350px;">
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+  <script type="text/javascript">
+    var placeSearch,autocomplete;
+  
+    function initialize() {
+      autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {   types: [ 'geocode' ] });
+      google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        if (place.geometry.viewport) {
+        Gmaps.map.map.fitBounds(place.geometry.viewport);
+        } 
+      });
+    }
+      
+    function geolocate() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var geolocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+          autocomplete.setBounds(new google.maps.LatLngBounds(geolocation, geolocation));
+        });
+      }
+    }
+  </script>
+  <style>
+  body {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  #locationField, #controls {
+    position: relative;
+    width: 480px;
+  }
+  #autocomplete {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  </style> 
+
+  <body onload="initialize()">
+    <div id="locationField" style="margin-left:330px; width:100%;">
+      <input id="autocomplete" placeholder="Search for a Place" onFocus="geolocate()" type="text" style="width: 300px; padding: 7px; border: 1px solid red"></input>
+      
+    </div>
+  </body>
+</div>
+<div class="social-like">
+   
+  <!-- <img src="/images/social.png" border="0" alt="" /> -->
+  <!---------------------------------- -->      
+  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fziparama.com%2F&amp;send=false&amp;layout=button_count&amp;width=87&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=382225668561698" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:87px; height:21px;" allowTransparency="true"></iframe>
+
+  <!---------------------------------- -->  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ziparama.com">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>    
+  <!---------------------------------- -->   
+  <!-- Place this tag where you want the +1 button to render. -->
+  <div class="g-plusone" data-size="small"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>   
+  <!---------------------------------- -->  
+</div>

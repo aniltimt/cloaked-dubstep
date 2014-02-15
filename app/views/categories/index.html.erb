@@ -1,0 +1,26 @@
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+  <tr class="heading-color">
+    <td align="left" valign="top" nowrap="nowrap"> Name </td>
+    <td align="left" valign="top" nowrap="nowrap"> Parent category </td>
+    <td align="left" valign="top" nowrap="nowrap"> Photo </td>
+    <td align="center" valign="top" colspan=3>Actions</td>
+  </tr>
+  <% if !@categories.blank? %>
+    <% @categories.each_with_index do |category,index| %>
+      <tr class="<%= index % 2 == 0 ? 'white-bg' : 'gray-bg1' %>">
+        <td align="left"  valign="middle" nowrap="nowrap" class="heading6"><%= category.name %></td>
+        <td align="left"  valign="middle" nowrap="nowrap" class="heading6"><%= category.parent_category.name if !category.parent_category.blank?%></td>
+        <td align="left"  valign="middle" nowrap="nowrap" class="heading6"><%= image_tag category.photo.url(:small) %></td>
+        <td align="center" valign="middle" nowrap="nowrap"><%= link_to 'Show', category %></td>
+        <td align="center" valign="middle" nowrap="nowrap"><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td align="center" valign="middle" nowrap="nowrap"><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+  <% else %>
+    <tr>
+      <td align="center" colspan="2" valign="top" class="heading6">No Category Present</td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "New Category" ,:controller => "categories",:action => 'new'  %>

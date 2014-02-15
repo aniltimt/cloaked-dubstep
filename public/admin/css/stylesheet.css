@@ -1,0 +1,656 @@
+/* designed by www.SoftElixir.com 
+ We turn your thoughts into reality */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.main-bg {
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat-x;
+}
+/* header */
+.header-img1 {
+    background-image: url(../images/header-img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 980px;
+    height: 21px;
+}
+.header-img2 {
+    background-image: url(../images/header-img2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 980px;
+    height: 71px;
+}
+.header-img3 {
+    background-image: url(../images/header-img3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 980px;
+    height: 36px;
+    line-height: 36px;
+}
+.header-img4 {
+    background-image: url(../images/header-img4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 980px;
+    height: 40px;
+    line-height: 40px;
+}
+/* headings */
+.heading1 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+.heading1a {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 11px;
+}
+.heading2 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #2B4AA6;
+    font-size: 11px;
+}
+.heading2a {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #2B4AA6;
+    font-size: 12px;
+    font-weight: bold;
+}
+.heading2b {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 11px;
+    font-weight: bold;
+}
+.heading3 {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #313131;
+}
+.heading4 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #515151;
+}
+.heading5 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #AFBBE8;
+    text-decoration: none;
+    font-size: 11px;
+}
+.main-heading {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #253E8A;
+}
+.main-heading2 {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    color: #16234D;
+}
+.main-heading3 {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #16234D;
+}
+.heading6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666667;
+    text-decoration: none;
+    font-size: 12px;
+}
+.heading6 a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #385BBF;
+    text-decoration: none;
+    font-size: 12px;
+    text-decoration: none;
+}
+.heading6 a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #385BBF;
+    text-decoration: none;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.heading6a {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #666667;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+.heading6b {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: normal;
+}
+/* footer */
+.footer-bg {
+    background-image: url(../images/footer-bg.jpg);
+    height: 31px;
+    background-repeat: repeat-x;
+    line-height: 31px;
+}
+.footer-text {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #9CAFE8;
+    font-size: 11px;
+}
+/* curve-box */
+.curve-top-left {
+    background-image: url(../images/curve-top-left.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+.curve-top-right {
+    background-image: url(../images/curve-top-right.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+.curve-bottom-left {
+    background-image: url(../images/curve-bottom-left.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+.curve-bottom-right {
+    background-image: url(../images/curve-bottom-right.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+}
+/* borders */
+.top-line {
+    background-image: url(../images/top-line.jpg);
+    height: 11px;
+    background-repeat: repeat-x;
+}
+.left-line {
+    background-image: url(../images/left-line.jpg);
+    width: 11px;
+    background-position: top left;
+    background-repeat: repeat-y;
+}
+.right-line {
+    background-image: url(../images/right-line.jpg);
+    width: 11px;
+    background-position: top right;
+    background-repeat: repeat-y;
+}
+.bottom-line {
+    background-image: url(../images/bottom-line.jpg);
+    height: 11px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+/* login */
+.login-left {
+    border-left: 1px solid #C8C9CB;
+}
+.login-right {
+    border-right: 1px solid #C8C9CB;
+}
+.login-top {
+    border-top: 1px solid #C8C9CB;
+}
+.login-bottom-line {
+    border-bottom: 1px solid #C8C9CB;
+}
+.login-bg {
+    background-image: url(../images/login-bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #FBFBFC;
+    border-top: 1px solid #C8C9CB;
+    height: 178px;
+}
+.login-bottom-left {
+    background-image: url(../images/login-bottom-left.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 56px;
+}
+.login-bottom-right {
+    background-image: url(../images/login-bottom-right.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 56px;
+}
+.login-bottom {
+    background-image: url(../images/login-bottom.jpg);
+    background-repeat: repeat-x;
+    height: 56px;
+}
+/* input */
+.input1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid #C8C9CB;
+    color: #515151;
+    height: 24px;
+}
+.input1a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #C8C9CB;
+    color: #515151;
+    height: 16px;
+	width: 251px;
+}
+.input1b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #C8C9CB;
+    color: #515151;
+}
+.blue-colo {
+    background-color: #2C4DAD;
+    width: 5px;
+}
+.gray-color {
+    background-color: #D3D2D7;
+    width: 6px;
+    border-left: 1px #E6E5EA solid;
+}
+.gray-video-bg {
+    background-color: #D3D2D7;
+    border-bottom: 1px solid #898989;
+    border-left: 1px solid #DCDBDF;
+    height: 32px;
+    line-height: 32px;
+}
+.video-bg {
+    background-color: #EFEFEF;
+}
+/* links */
+.link1 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 11px;
+}
+.link1:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: underline;
+    font-size: 11px;
+}
+.link2 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #AFBBE8;
+    text-decoration: underline;
+    font-size: 11px;
+}
+.link2:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #AFBBE8;
+    text-decoration: none;
+    font-size: 11px;
+}
+.link3 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 11px;
+}
+.link3:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+}
+.link4 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 11px;
+}
+.link4:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: underline;
+    font-size: 11px;
+}
+.link5 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #5474D2;
+    text-decoration: none;
+    font-size: 11px;
+}
+.link5:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #5474D2;
+    text-decoration: underline;
+    font-size: 11px;
+}
+/* more-button */
+.image-link {
+    border: 1px solid #ECE9E9;
+    height: 111px;
+    width: 111px;
+    display: block;
+    cursor: pointer;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #666667;
+    text-decoration: none;
+    font-size: 11px;
+}
+.image-link:hover {
+    border: 1px solid #ECE9E9;
+    height: 111px;
+    width: 111px;
+    display: block;
+    border-right: 1px solid #B8B8B8;
+    border-bottom: 1px solid #B8B8B8;
+    cursor: pointer;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #666667;
+    text-decoration: none;
+    font-size: 11px;
+}
+.blue-right-line {
+    border-right: 7px #2C4CAB solid;
+}
+/*.border-white-top
+ {
+ background-color:#FFFFFF;
+ height:10px;
+ }*/
+.blue {
+    background-image: url(../images/blue.jpg);
+    background-repeat: repeat-y;
+    background-position: top right;
+    border-top: 20px solid #FFFFFF;
+}
+.gray-bg {
+    background-image: url(../images/gray-bg.jpg);
+    background-position: top left;
+    background-repeat: repeat-y;
+    width: 234px;
+}
+/* nav */
+.nav-left {
+    background-image: url(../images/nav-left.jpg);
+    background-position: top left;
+    width: 23px;
+    height: 42px;
+    background-repeat: no-repeat;
+}
+.nav-bg {
+    background-image: url(../images/nav-bg.jpg);
+    height: 42px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+.nav {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+.nav:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding-left: 10px;
+}
+.bullet1 {
+    background-image: url(../images/bullet1.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 30px;
+}
+.button-bg {
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    line-height: 28px;
+}
+.sub-link {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    text-decoration: none;
+    padding-left: 12px;
+}
+.sub-link:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    text-decoration: underline;
+}
+.height5 {
+    height: 2px;
+}
+.height5a {
+    height: 5px;
+}
+.height8 {
+    height: 12px;
+}
+.height10 {
+    height: 13px;
+}
+.listing-bg-color {
+    background-color: #E7E7E7;
+}
+.heading-color {
+    background-color: #F0F0F0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #385BBF;
+    height: 25px;
+    line-height: 25px;
+}
+.white-bg {
+    background-color: #FFFFFF;
+}
+.gray-bg1 {
+    background-color: #F9F9F9;
+}
+.gray-button-bg {
+    background-color: #CDCBCB;
+    border-top: 1px solid #A6A3A3;
+    height: 28px;
+    line-height: 28px;
+}
+#wait_loading {
+    border: none;
+    background: url('../images/wait.gif') no-repeat top left;
+    padding: 6px 8px 0px 30px;
+    vertical-align: middle;
+    text-align: left;
+}
+/* more-button */
+.input-image-button {
+    border: none;
+    background: url('../images/login1.png') no-repeat top left;
+    padding: 2px 8px;
+    height: 53px;
+    width: 131px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.more-button {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #666667;
+    background-color: #F0F0F0;
+    font-weight: bold;
+    font-size: 11px;
+    height: 20px;
+    border: 1px solid #BDB9B9;
+    text-align: center;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none;
+}
+.more-button:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #666667;
+    background-color: #F0F0F0;
+    font-size: 11px;
+    height: 20px;
+    border: 1px solid #BDB9B9;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*
+.more-button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid #C8C9CB;
+    color: #515151;
+    height: 24px;
+}
+*/
+
+.ajax-wait-notification {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-image: url(../images/wait.gif);
+    background-repeat: no-repeat;
+    color: #C1230E;
+    width: 400px;
+    text-align: left;
+    padding-left: 18px;
+    min-height: 30px;
+    font-weight: bold;
+}
+.error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #C1230E;
+    /*width: 440px;*/
+    text-align: center;
+    padding: 10px;
+}
+.error-bold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #C1230E;
+}
+.header-bg {
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 164px;
+}
+.activeInactiveClass {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #5474D2;
+    font-size: 11px;
+}
+.calLinkClass {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+}
+.tdText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    height: 16px;
+}
+.calTd {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+.calTh {
+    /*style:width:36px;*/
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    border-left: 1px solid #ffffff;
+}
+.calTb {
+    /*style:border:1px solid #cccccc;*/
+    padding: 3px;
+}
+.link-red {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.link-red:hover {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 12px;
+}
+.upArrow {
+    cursor: pointer;
+}
+.downArrow {
+    cursor: pointer;
+}
+.action {
+    cursor: pointer;
+}
+.active {
+    cursor: default;
+    color: #385BBF;
+}
+.active:hover {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.act {
+    color: #666667;
+}
+.errorExplanation{
+    color: red;
+}
+.contactleft {width:500px; float:left; margin:0 20px 0 0 0;}
+.contentmain { margin:5% 0 4% 0; background:#fff; padding:20px; border:1px solid #ccc6c6; height:350px; overflow-x:hidden;  overflow-y:scroll; }
+.contentmain  h1 {width:800px; float:left; margin:0 0 8px 0; color:#e01f26; font-size:21px; font-weight:bold;}
+.contentmain  h2 {width:800px; float:left; margin:0 0 8px 0; color:#181818; font-size:15px; font-weight:bold;}
+.contentmain  p {width:800px; float:left; margin:0 0 8px 0; color:#4c4949; font-size:12px; font-weight:normal;}
+
+
+ .formrow input[type="password"] {border: 1px solid #4C4949;color: #000000;font-size: 12px;padding: 7px;width: 300px;}
+.formrow input:hover[type=submit] {background:#E01F26; height:30px; width:315px; line-height:30px; color:#fff; text-decoration:none; cursor:pointer; font-weight:bold; font-size:15px; border:none; font-family:Century Gothic, Arial, Helvetica, sans-serif;}
+.formrow {width:480px; float:left; padding:0 0 5px 0; margin:0 0 5px 0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.formrow label {width:120px; float:left; margin:5px 0 0 0; color:#4c4949;}
+.formrow input[type=text] {padding:7px; width:300px; color:#000; border:1px solid #4c4949; font-size:12px;}
+.formrow input:focus[type=text] {padding:7px; width:300px; color:#000; border:1px solid #666; font-size:12px;}
+.formrow select {padding:7px; width:315px; color:#000; border:1px solid #4c4949; font-size:12px;}
+.formrow select:focus {padding:7px; width:315px; color:#000; border:1px solid #666; font-size:12px;}
+.formrow input[type=submit] {background:#E01F26; height:30px; width:315px; line-height:30px; color:#fff; text-decoration:none; cursor:pointer; font-weight:bold; font-size:15px; border:none; font-family:Century Gothic, Arial, Helvetica, sans-serif;}
+.formrow input:hover[type=submit] {background:#E01F26; height:30px; width:315px; line-height:30px; color:#fff; text-decoration:none; cursor:pointer; font-weight:bold; font-size:15px; border:none; font-family:Century Gothic, Arial, Helvetica, sans-serif;}

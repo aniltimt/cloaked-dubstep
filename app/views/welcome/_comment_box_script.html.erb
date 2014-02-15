@@ -1,0 +1,24 @@
+<script>
+  $("#post_data").click(function() {
+    if ($('#comment_text').val() == ""){
+      $('.errorMsgLeft_comment_text').html("Enter your Comment.");
+      var chec_error = true;
+    }else{
+      $('.errorMsgLeft_comment_text').html("");
+    }
+    if (chec_error == true){
+      return false;
+    }else{
+      var comment_text = $('#comment_text').val();
+      var pin_id = $('#pin_id').val();
+      var u_id = $('#u_id').val();
+      $.post("/comment/create", { pin_id: pin_id, u_id: u_id, comment_text: comment_text },function(rdata){
+        $('.content').html(rdata);
+      });
+      return false;
+    }
+  });  
+  $("#submit_comment").submit(function() { 
+    return false;
+  });  
+</script> 

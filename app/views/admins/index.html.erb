@@ -1,0 +1,17 @@
+<link href="/admin/css/login.css" rel="stylesheet" type="text/css" />
+
+<div id="login">
+  <h1><img src="/admin/images/login-img.png" width="50" />&nbsp; Admin Login</h1><br />
+  <div id="errorDisplay" class="error"></div>
+  <div id="helper"><div>Use a valid email address and password to gain access to the Customer Member Area</div> </div>
+  <%= form_for @user_session, :url => {:action => "login"} do |f|%>
+          <%= f.error_messages%>
+      <fieldset id="inputs">
+        <%= f.text_field :login,  :placeholder => 'Username'%>
+        <%= f.password_field :password , :placeholder=> 'Password'%>
+      </fieldset>
+      <fieldset id="actions">
+        <%= submit_tag 'Login', :id => 'submit' %>
+      </fieldset>
+  <% end %>
+</div>

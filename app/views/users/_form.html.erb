@@ -1,0 +1,7 @@
+<%= form.error_messages %>
+
+
+<div class="formrow"><%= form.label :login ,"Username"%><%= form.text_field :login %></div>
+<div class="formrow"><%= form.label :email %><%= form.text_field :email %></div>
+<div class="formrow"><%= form.label :password, form.object.new_record? ? nil : "Change password" %><%= form.password_field :password %></div>
+<div class="formrow"><%= form.label :password_confirmation %><%= form.password_field :password_confirmation %></div>

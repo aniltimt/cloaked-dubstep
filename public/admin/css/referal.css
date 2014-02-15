@@ -1,0 +1,163 @@
+.referals_table{
+    width: 100%;
+    border-collapse: collapse;    
+}
+.referals_table th{
+    border:solid 1px silver ;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #385BBF;
+    line-height: 25px;
+}
+.referals_table td{
+    border:solid 1px silver ;
+}
+
+td label{
+    margin-left: 5px;
+}
+
+#referals_container{
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.copy_button{
+    position: relative;
+    z-index: 2;
+    background-color: rgb(206, 208, 221);
+    border: solid 1px rgb(172, 172, 172);
+    border-radius: 3px;
+    width: 59px;
+    padding-left: 24px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 6px 1px;
+}
+
+#notification{
+    background-size: 40px 40px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%, transparent 75%, transparent);
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+    width: 100%;
+    top: 0px;
+    left: 0;
+    border: 1px solid;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    _position: absolute;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    animation: animate-bg 5s linear infinite;
+    background-color: #4ea5cd;
+    border-color: #3b8eb5;
+}
+
+#add_link{
+    float: left;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: baseline;
+    margin: 0 2px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top, #00adee, #0078a5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+    margin: 5px;
+}
+#add_link:hover{
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top, #0095cc, #00678e);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+#add_link:active{
+    color: #80bed6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+    background: -moz-linear-gradient(top, #0078a5, #00adee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+#refereal_info{
+    height: 21px;
+    background-color: rgb(184, 215, 255);
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 5px;
+    border: solid 1px rgb(182, 182, 182);
+}
+
+.referals_table_container{
+    float: left;
+    border: solid 1px silver;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 1%;
+}
+
+.ref_tab_title{
+    height: 2em;
+    background-color: rgb(174, 207, 255);
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    line-height: 2em;
+    font-weight: bolder;
+    color: rgb(0, 95, 182);
+    border: solid 1px rgb(224, 224, 224);
+}
+
+td a:hover{
+    cursor: pointer;
+}
+
+#popup_msg{
+    background-color: rgba(214, 214, 214, 0.82);
+    padding: 5px;
+    border: solid 1px silver;
+    border-radius: 5px;
+    z-index: 3;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+#ref_info{
+    background-color: rgb(243, 243, 243);
+    border: solid 1px silver;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#ref_info p{
+    font-size: 22px;
+    width: 84%;
+    float: left;
+    margin: 5px;   
+}
+
+#ref_info img{
+    float: right;
+    margin-right: 20px;
+    opacity: 0.6;    
+}

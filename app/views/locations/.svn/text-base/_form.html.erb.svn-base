@@ -1,0 +1,60 @@
+<style>
+  .formError{
+    color: red;
+    text-align: right;
+    width: 435px;
+  }
+</style>
+<%= form_for(@location) do |f| %> 
+<% if !params[:dynamic].blank? %>
+    <%  
+      @location.description = ""
+      @location.title = ""
+      @location.category_id = ""
+    %>
+  <% end %>
+  <div class="formrow">
+    <%= f.label :title , "Title" %>
+    <%= f.text_field :title %>
+    <%= f.error_message_on :title %>
+  </div>
+  <div class="formrow">
+    <%= f.label :category_id %>
+    <%= f.select :category_id, Category.all.map{ |c| [c.name, c.id] }, :prompt => 'Select Category'  %>
+    <%= f.error_message_on :category_id %>
+  </div>
+  <div class="formrow">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.error_message_on :description %>
+    <%= f.hidden_field :user_id, :value => current_user.id %> 
+  </div>
+  <% if (params[:action] == 'new' || params[:action] == 'create') && params[:dynamic].blank? %>
+    <div class="formrow">
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+      <%= f.error_message_on :address %>
+    </div>  
+  <% else %>
+    <%= f.hidden_field :longitude %>
+    <%= f.hidden_field :latitude %>
+    <%= hidden_field_tag :object_id_location,@location.id %>
+  <% end %>
+  <div class="formrow">
+    <%= f.label :website_address , "Website" %>
+    <%= f.text_field :website_address %>
+    <%= f.error_message_on :website_address %>
+  </div>
+  <div class="formrow">
+    <%= f.label :youtube_video_url  %>
+    <%= f.text_field :youtube_video_url %>
+    <%= f.error_message_on :youtube_video_url %>
+  </div>
+    
+  <div class="formrow">
+    <%= f.label :photo ,"Attach small photo(Max size 3Mb)"%>
+    <%= f.file_field :photo %>
+    <%= f.error_message_on :photo %>
+  </div>
+  <div class="formrow subbordernone"><label>&nbsp;</label><%= f.submit "Update Pin" %></div>
+<% end %>

@@ -1,0 +1,42 @@
+<table width="770" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" class="login-right">&nbsp;</td>
+    <td valign="top" class="login-bg"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
+      <tr>
+        <td width="27%" valign="top" align="right"></td>
+        <td width="73%"  valign="top" align="right" style="padding-right: 20px; padding-top:15px;"><span class="heading6a"><span style="color:#993300;">*</span> - Required Field</span></td>
+      </tr>
+      <%= form_for @page, :url => { :action => :update } do |f| %>
+
+      <tr>
+        <td colspan="2" align="center" valign="top"><div id="errorDisplay" class="error" style="padding-top:10px; padding-bottom:25px; padding-left:20px; padding-right:20px; text-align:left;"><%= f.error_messages %></div></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top" class="heading6a"><span style="color:#993300;">* </span>Page Heading    : </td>
+        <td align="left" valign="top"><%= f.text_field :page_heading %></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top" class="heading6a"><span style="color:#993300;">* </span> Content : </td>
+        <td align="left"  class="heading6">
+          <%= cktext_area_tag("page[content]",@page.content) %> 
+          <%#= f.text_area :content %>
+        </td>
+      </tr>
+
+      <tr>
+        <td align="right" valign="top" class="heading6a">&nbsp;</td>
+        <td align="left" valign="top"><%= f.submit "Update", :class => 'more-button' %>
+          <%= f.hidden_field :id %>
+          </td>
+      </tr>
+      <% end %>
+
+    </table></td>
+    <td valign="top" class="login-left">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" class="login-bottom-left">&nbsp;</td>
+    <td valign="middle" class="login-bottom">&nbsp;</td>
+    <td valign="top" class="login-bottom-right">&nbsp;</td>
+  </tr>
+</table>

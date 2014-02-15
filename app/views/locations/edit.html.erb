@@ -1,0 +1,19 @@
+<% if params[:dynamic] == "1"  %>
+  <h1>My pin details</h1>
+  <div class="contactleft">
+    <%= render 'form' %>
+  </div>
+<% else %>
+  <div class="innermain">
+    <div class="innerwrap">
+      <div class="contentmain">
+        <h1>My pin details</h1>
+        <div class="contactleft">
+          <%= render 'form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+

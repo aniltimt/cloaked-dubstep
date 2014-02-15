@@ -1,0 +1,28 @@
+<div class="navigationhome">
+                <div class="nav">
+                  <ul>
+                    <li><a>&nbsp;&nbsp;</a></li>
+                    <li><a href="/welcome/page_content/3">ABOUT</a>
+                      <ul class="navMenu2">
+                        <li><a href="/welcome/page_content/1" class="active">HOW&nbsp;IT&nbsp;WORKS</a></li>
+                        <li><a href="/welcome/page_content/2" class="">FAQ's</a></li>
+                        <li><a href="/welcome/page_content/4" class="">PRIVACY&nbsp;POLICY</a></li>
+                        <li><a href="/welcome/terms_of_use">TERMS&nbsp;OF&nbsp;USE</a></li>
+                        <li><a href="/welcome/page_content/6" class="">ADVERTISE</a></li>
+                        <li><a href="/welcome/contact">CONTACT&nbsp;US</a></li>
+                      </ul>
+                    </li>
+                    <%if current_user%>
+                      <li><%= link_to "SIGN OUT", logout_path%></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <div class="socialhome">
+                  <a href="https://play.google.com/store/apps/details?id=com.ziparama.android&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS56aXBhcmFtYS5hbmRyb2lkIl0" target="_blank"><img src="/images/googleplay.png" border="0" alt="" /></a>
+                  <a href="http://facebook.com/ziparama" target="_blank"><img src="/images/facebook.png" border="0" alt="" /></a>
+                  <a href="http://twitter.com/ziparama" target="_blank"><img src="/images/twitter.png" border="0" alt="" /></a>
+                  <a href="http://www.linkedin.com/company/3118332?goback=%2Efcs_GLHD_ziparama_false_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&                trk=NUS_CMPY_FOL-pdctd" target="_blank"><img src="/images/linkedin.png" border="0" alt="" /></a>
+                  <!-- <a href="https://plus.google.com/u/1/b/103740285334177832371/" target="_blank"><img src="/images/space.png"                 border="0" alt="" /></a> -->
+                  <a href="http://www.youtube.com/channel/UCJAtwq35Oja8RQX3MQcZy0g" target="_blank"><img src="/images/youtube.png" border ="0" alt="" /></a>
+                </div>
+              </div>

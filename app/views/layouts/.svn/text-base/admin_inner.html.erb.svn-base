@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  <meta http-equiv="expires" content="0">
+  <title>- :: - <%= ADMIN_SITE_TITLE %> - :: -</title>
+  <link href="/admin/css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <link href="/admin/sdmenu/sdmenu.css" rel="stylesheet" type="text/css" />
+  <script language="javascript" src="</admin/sdmenu/sdmenu.js"></script>
+  <script src="/javascripts/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript">
+      // <![CDATA[
+      var myMenu;
+      window.onload = function() {
+          myMenu = new SDMenu("my_menu");
+          myMenu.init();
+      };
+      // ]]>
+  </script>
+  <noscript>
+    <h2>This web site needs javascript activated to work properly. Please activate it. Thanks!</h2>
+  </noscript>
+</head>
+<body>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31402524-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" class="main-bg"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" class="header-bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td  valign="top"></td>
+              </tr>
+              <tr>
+                <td height="79" valign="middle"><a href="#"></a>
+                  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td valign="top"><h1 style="color:#FFFFFF; font-family:Geneva, Arial, Helvetica, sans-serif;">Ziparama</h1></td>
+                      <td align="right"> <h3 style="font-family:Geneva, Arial, Helvetica, sans-serif; font-size: 16px; color:rgb(158, 158, 158); float: right;"> </h3></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="36" valign="middle"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="45%" align="left" valign="top" class="heading5">You are logged in as <b>Admin</b> </td>
+                    <td width="55%" align="right" valign="top" colspan="2" class="heading5"></strong>&nbsp;&nbsp;<a href="/logout" class="link3">Sign out</a></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="30" valign="middle"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="37%" valign="top" class="heading1"></td>
+                    <td width="63%" align="right" valign="top" class="heading1"></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td class="height8"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top" class="header-img5"></td>
+      </tr>
+      <tr>
+        <td valign="top">
+
+
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="225" valign="top" class="blue">
+
+                <div style="float: right" id="my_menu" class="sdmenu">
+                  <!-- *********************************Start Menu****************************** -->
+
+                  <div>
+                    <span>Admin Links</span>
+                    <ul>
+                      <li>
+                        <a href="/admins/pages" title="Content Manager">Content Manager</a>
+                      </li>
+                      <li>
+                        <a href="/categories" title="Category Manager">Category Manager</a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+
+
+                </div>
+              </td>
+              <td width="5" valign="top">&nbsp;</td>
+              <td valign="top"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td valign="top" class="height10"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td valign="top" class="curve-top-left"></td>
+                      <td valign="top" class="top-line"></td>
+                      <td valign="top" class="curve-top-right"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top" class="left-line">&nbsp;</td>
+                      <td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="40" valign="top"><img src="/admin/images/record-module.jpg" border="0" width="35" height="46"/></td>
+                          <td valign="middle" nowrap="nowrap" class="main-heading">Administrator Panel</td>
+                          <td width="70%" align="right" valign="middle"></td>
+                        </tr>
+                      </table></td>
+                      <td valign="top" class="right-line">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td valign="top" class="curve-bottom-left"></td>
+                      <td valign="top" class="bottom-line"></td>
+                      <td valign="top" class="curve-bottom-right"></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td valign="top" class="height5"></td>
+                </tr>
+                <tr>
+                  <td valign="top">
+
+                    <%= yield %>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">&nbsp;</td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+
+      <br />
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="footer-bg"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" class="footer-text"><%= SITE_PATH %></td>
+      </tr>
+
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

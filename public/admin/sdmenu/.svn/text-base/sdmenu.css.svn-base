@@ -1,0 +1,67 @@
+div.sdmenu {
+	width: 210px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	padding-right:7px;
+	color: #fff;
+}
+div.sdmenu div {
+	background: url(title.gif) no-repeat;
+	background-position:top right;
+	overflow: hidden;
+}
+div.sdmenu div:first-child {
+	background: url(title.gif) no-repeat;
+	background-position:top right;
+}
+div.sdmenu div.collapsed {
+	height:41px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 17px 25px 13px 30px;
+	font-weight: bold;
+	line-height:1px;;
+	color: white;
+	cursor: default;
+}
+div.sdmenu div ul
+ {
+	padding-left:22px;
+	margin:8px 4px 4px 0px;
+}
+div.sdmenu div li
+ {
+	padding-bottom:3px; 
+	padding-top:3px;
+}
+div.sdmenu div a {
+font-family:Arial, Helvetica, sans-serif;
+	padding: 5px 10px;
+	background :url(bullet1.jpg) no-repeat left;
+	display: block;
+	border: 1px solid #ddd;
+	background-color: #F0F0F0;
+	padding-left:30px;
+	color: #333;
+	text-decoration:none;
+	font-size:12px;
+}
+div.sdmenu div a.current {
+
+	background :url(bullet1.jpg) no-repeat left;
+	font-size:12px;
+	color:#5474D2;
+	text-decoration:underline;
+	background-color : #F9F9F9;
+	padding-left:30px;
+}
+div.sdmenu div a:hover {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+	background : #F9F9F9 url(bullet1.jpg) no-repeat left;
+	color: #333;
+	text-decoration: none;
+	padding-left:30px;
+}

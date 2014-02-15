@@ -1,0 +1,237 @@
+#helper{
+    position:relative;
+    height: 50px;
+}
+#helper div{
+    width: 404px;
+}
+
+/* --Footer index-- */
+#footer_index{
+    font-family: Arial;
+    width: 98%;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 35px;
+    background-image: url('../images/gradient.png');
+    background-size: 35px;
+    text-shadow:3px 4px 31px #000000;
+    border-radius: 10px;
+    border: solid 1px silver;
+    text-align: center;
+    clear: both;
+    position:absolute; 
+}
+#footer_index div{
+    font-size: 14px;
+    margin-top: 9px;
+}
+/* --Footer index end-- */
+
+
+
+/*--------------------*/
+#login
+{
+    background-color: #fff;
+    width: 400px;
+    margin: 20px 0 0 -230px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 30px;
+    z-index: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid 1px silver;
+    font-family: Arial;
+    position: relative;
+}
+#login:before
+{
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 0 1px #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+/*--------------------*/
+h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: #16234D;
+    margin: 0 0 15px 0;
+    letter-spacing: 4px;
+    font: bold 22px/1 Verdana, Helvetica;
+    position: relative;
+}
+h1 img{
+    position: absolute;
+    top: -7px;
+    left: -12px;
+    width: 58px;
+}
+h1:after, h1:before
+{
+    background-color: #777;
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    width: 120px;   
+}
+h1:after
+{ 
+    background-image: -webkit-gradient(linear, left top, right top, from(#777), to(#fff));
+    background-image: -webkit-linear-gradient(left, #777, #fff);
+    background-image: -moz-linear-gradient(left, #777, #fff);
+    background-image: -ms-linear-gradient(left, #777, #fff);
+    background-image: -o-linear-gradient(left, #777, #fff);
+    background-image: linear-gradient(left, #777, #fff);      
+    right: 0;
+}
+h1:before
+{
+    background-image: -webkit-gradient(linear, right top, left top, from(#777), to(#fff));
+    background-image: -webkit-linear-gradient(right, #777, #fff);
+    background-image: -moz-linear-gradient(right, #777, #fff);
+    background-image: -ms-linear-gradient(right, #777, #fff);
+    background-image: -o-linear-gradient(right, #777, #fff);
+    background-image: linear-gradient(right, #777, #fff);
+    left: 0;
+}
+/*--------------------*/
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*--------------------*/
+#inputs input
+{
+    background: #f1f1f1 url(../images/login-sprite.png) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin: 0 0 10px 0;
+    width: 353px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid;
+}
+#inputs input:focus
+{
+    background-color: #fff;
+    outline: none;
+}
+/*--------------------*/
+#actions
+{
+    margin: 25px 0 0 0;
+}
+#submit
+{		
+    background-color: #16234D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#16234D), to(#16234D));
+    background-image: -webkit-linear-gradient(top, #16234D, #16234D);
+    background-image: -moz-linear-gradient(top, #16234D, #16234D);
+    background-image: -ms-linear-gradient(top, #16234D, #16234D);
+    background-image: -o-linear-gradient(top, #16234D, #16234D);
+    background-image: linear-gradient(top, #16234D, #16234D);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    border-width: 1px;
+    border-style: solid;
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #fff;
+}
+#submit:hover,#submit:focus
+{		
+    background-color: #16234D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #16234D, #16234D);
+    background-image: -moz-linear-gradient(top, #16234D, #16234D);
+    background-image: -ms-linear-gradient(top, #16234D, #16234D);
+    background-image: -o-linear-gradient(top, #16234D, #16234D);
+    background-image: linear-gradient(top, #16234D, #16234D);
+}	
+#submit:active
+{		
+    outline: none;
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+#submit::-moz-focus-inner
+{
+  border: none;
+}
+#actions a
+{
+    color: #3151A2;    
+    float: right;
+    margin-left: 10px;
+    font-size: 12px;
+    text-decoration: none;
+}
+#actions a:hover
+{
+    text-decoration: underline;
+}
+/*--------------------*/
+#back
+{
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 60px;
+    color: #999;
+}
+#secretQuestion{
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    height: 30px;
+    position: relative;
+    margin-bottom: 17px;
+    font-size: 12px;
+    width: 400px;
+}
+#secretQuestion:focus{
+    background-color: white;
+}
+#inputs #email{
+    background-position-y: -98px;
+    background-position-x: 6px;
+}
+#inputs #name{
+    background-position-x: 6px;
+}
+#inputs #password{
+    background-position-x: 6px;
+    background-position-y: -50px;
+}
+#inputs #confirmPassword{
+    background-position-x: 6px;
+    background-position-y: -50px;
+}
+#inputs #answer{
+    background-position-x: 6px;
+    background-position-y: -148px;
+}
+#activation_msg{
+    color: blue;
+}
+#resend_btn:hover{
+    cursor: pointer;
+}

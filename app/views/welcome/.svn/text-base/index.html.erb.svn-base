@@ -1,0 +1,36 @@
+<%  zoom_level = !@single_facebook_location.blank? ? 5 : 3 %>
+<%= gmaps(:markers => {:data => @json, :options => { :raw => '{ animation: google.maps.Animation.DROP }' } },:map_options => { :libraries => ["places"],:type => 'HYBRID',:auto_adjust => false, :auto_zoom => false, :zoom => zoom_level,:raw => '{ disableDefaultUI: false,draggable: true, scrollwheel: true, zoomControl: true,zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, scaleControl: true, panControl  :true, panControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER} ,streetViewControl:true}' }) %>      
+ 
+<% content_for :scripts do %>
+  <script type="text/javascript">
+    Gmaps.map.callback = function() {
+      for (var i = 0; i <  Gmaps.map.markers.length; ++i) {
+        marker = Gmaps.map.markers[i];
+        google.maps.event.addListener(
+        marker.serviceObject, 'click', function() { 
+          $.ajax({
+            type: "GET",
+            url: "/welcome/change_pin_data?id=" + this.title.split('#')[1]  ,
+            //data: form_data,
+            success: function(respuesta) {
+               // $('.ajaxgif').hide();
+               $('#accordion li').children('ul').slideUp('fast'); 
+               $('#pin_data_change').hide();
+                $('#pin_data_change').html(respuesta);
+                $('#pin_data_change').animate({width: 'toggle'});
+            },
+            error: function() {
+                //$('.ajaxgif').hide();
+                alert("Error! Please try again");
+            }
+          });
+          return false;
+        });
+      }
+      <% if !@single_facebook_location.blank? %>
+        Gmaps.map.map.panTo(new google.maps.LatLng(<%= @single_facebook_location.latitude %>,<%= @single_facebook_location.longitude  %>));
+      <% end %>
+    }; 
+
+  </script>
+<% end %>

@@ -1,0 +1,61 @@
+<% 
+  app_id= '196747003816103'
+ url = "https://www.facebook.com/dialog/feed?
+  app_id=#{app_id}&
+  link=http://ziparama.com?pin_id=#{single.id}&
+  picture=http://ziparama.com#{single.photo.url(:medium)}&
+  name=#{single.title } (Click to view this pin on Ziparama)&
+  description=#{raw(single.description)}&
+  redirect_uri=#{root_url}" %>
+  <!-- caption=#{single.WEBSITE}& -->
+<div class='pinmain' >
+  <div class='pinscreen' style="border:2px solid;border-radius:25px;">
+  	<a href="#" onclick="$('#pin_data_change').hide();" class="close" style="float: right;margin-top: -13px;margin-right: -9px;"><img src="/images/close_x_white.gif" title="close" class="close_image" style="    width: 15px;"></a>
+  	<div class='pinrow'>
+  	  <div class='pinimage'>
+  	  	<a href="<%= single.photo.url(:large) %>" rel="facebox">
+  	  	  <img alt='-1368001238352' src='<%= single.photo.url(:medium) %>'  />
+  	  	</a>
+  	  </div>
+  	  <div class="pinimage">
+  	  	<iframe width="300px" height="300px" src="//www.youtube.com/embed/<%= single.youtube_video_url.blank? ? '_AKOvOh_QGg' : single.youtube_video_url.split('v=')[1] %>" frameborder="0" allowfullscreen></iframe>
+  	  </div>
+  	</div>
+  	<h1><%= single.title %></h1>
+  	<div class='pindesc'>
+  	  <strong></strong>
+  	  <p>
+  	  	<%= raw(single.description.gsub('\n','<br />')) %>
+  	  </p>
+  	</div>
+  	<div class='pinright'>
+  	  <div class='pindate'>
+  	  	<strong>Category:</strong>
+  	  	<small><%= cat_image_object.name  if !cat_image_object.blank? %></small>
+        <strong>Pin # <%= single.id %></strong>
+  	  </div>
+  	  <div class='pintext'>
+  	  	<!-- <strong>Website:</strong>--><p><%= single.website_address %></p>
+  	  	<!-- <p>ID#<%= single.id %></p> -->
+  	  </div>
+  	</div>
+  	<div class='redbox'>
+  	  <div class='pinscroll'>
+  	  	<%= link_to(image_tag('/images/fshare.png',:style=>"height: 24px;"), url)%><!-- <a href='#' ><img border='0' alt='' src='/images/fshare.png'></a><a href='#'><img border='0' alt='' src='/images/tshare.png'></a> -->
+  	  </div>
+  	  <div class='pincomment'>
+  	  	<a href='/comment/show_comments?pin_id=<%=single.id%>' rel='facebox' ><img border='0' alt='' src='/images/comment.png'></a>
+  	  </div>
+  	</div>
+  	<div id='facebox' style="display:none;">
+      <div class='popup'>
+	    <div class='content'></div>
+        <a href="#" class="close"><img src="/facebox/closelabel.png" title="close" class="close_image"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script> 
+  $(document).ready(function () { $('a[rel*=facebox]').facebox() ; });
+</script>

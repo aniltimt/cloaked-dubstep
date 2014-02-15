@@ -1,0 +1,28 @@
+<style>
+  .formError{
+    color: red;
+    text-align: right;
+    width: 435px;}
+</style>
+<%= form_for @category , :html => { :multipart => true } do |f| %>
+  <div class="formrow">
+  	<%= f.label :name %>
+  	<%= f.text_field :name %>
+  	<%= f.error_message_on :name %>
+  </div>
+  <div class="formrow">
+  	<%= f.label :parent_category_id %>
+  	<%= select("category", "parent_category_id", Category.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'})  %>
+  	<%= f.error_message_on :parent_category_id %>
+  </div>
+  <div class="formrow">
+  	<%= f.label :photo %>
+  	<%= f.file_field :photo %>
+  	<%= f.error_message_on :photo %>
+  </div>
+  <div class="formrow subbordernone">
+  	<label>&nbsp;</label>
+  	<%= f.submit "Submit" %>
+  </div>
+<% end %>
+<%= link_to 'Listing categories', categories_path %>

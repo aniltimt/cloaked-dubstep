@@ -1,0 +1,63 @@
+*{margin:0px; padding:0px;}
+body {background:#181818; font-family:Arial, Helvetica, sans-serif; margin:0px; padding:0px; background:url(../images/bg.png) repeat center top;}
+#wrapper {width:100%; float:left; }
+.navigation {background:#181818; height:63px; line-height:63px; float:left; left:0px; width:67%; padding-right:1%; position:fixed; z-index:999; top:10%; border-radius:0 3px 3px 0;  -webkit-border-radius:0 3px 3px 0;}
+.ziplogoleft {width:15%; float:left; background:#ffffff; height:53px; padding:10px 0 0 0;  text-align:center; }
+.nav {width:48%; float:left;  height:63px;}
+.nav ul {margin:0px; padding:0px;}
+.nav ul li {margin:0; padding:0; float:left; list-style:none;}
+.nav ul li a {padding:0 7px; float:left; text-decoration:none; font-size:75%; font-weight:normal; color:#FFF; display:block;}
+.nav ul li a:hover {padding:0 7px; float:left; text-decoration:none; font-size:75%; font-weight:normal; background:#3e3e3e; color:#fff; display:block;}
+.nav ul li a.active {padding:0 7px; float:left; text-decoration:none; font-size:75%; font-weight:normal; background:#3e3e3e; color:#fff; display:block;}
+.social {width:37%; float:left; text-align:right; }
+.mapbackground {width:100%; float:left; position:fixed;}
+.mapmain{margin:0px!important; padding:0px!important;}
+.mapmain body {margin:0px!important; padding:0px!important;}
+.rightimage {background:url(../images/rightimage.png) no-repeat right top; position:fixed; right:0; z-index:9999; float:left; width:461px; height:100%;}
+.logo {width:100%; float:left; text-align:right; margin-top:10%;}
+.social-like {width:100%; float:left; text-align:right; right:5%; top:-2%; position:relative;}
+.search-box {width: 100%; text-align: right; right: 2px; top: 75px; position: fixed; z-index: 2;}
+.menubaar {width:268px; float:left;  right:-35%; top:0; position:relative;}
+
+/* accordion */
+#accordion{margin:0; padding:0; list-style:none; width:268px; float:left;}
+#accordion li{width:268px; margin:0 0 1px 0;}
+#accordion li a{display:block; width:148px; height:39px; line-height:39px; padding:0 60px; font-size:17px; font-weight:bold; color:#ffffff; text-decoration:none;}
+#accordion li a.popular{background:url(../images/accorlink.png) no-repeat 0 0}
+#accordion li a.popular:hover{background:url(../images/accorlink.png) no-repeat 0 0;}
+#accordion li a.popularOver{background:url(../images/accorhover.png) no-repeat 0 0 !important}
+#accordion li a.category{background:url(../images/accorlink.png) no-repeat 0 0;}
+#accordion li a.category:hover{background:url(../images/accorlink.png) no-repeat 0 0;}
+#accordion li a.categoryOver{background:url(../images/accorhover.png) no-repeat 0 0 !important}
+#accordion li a.comment{background:url(../images/accorlink.png) no-repeat 0 0;}
+#accordion li a.comment:hover{background:url(../images/accorlink.png) no-repeat 0 0 !important}
+#accordion li a.commentOver{background:url(../images/accorhover.png) no-repeat 0 0;}
+#accordion ul{background:#3e3e3e; width:224px; margin:0 0 0 44px; padding:0; display:none; border-top:1px solid #fff}
+#accordion ul li{height:22px; line-height:22px; width:224px; list-style:none}
+#accordion ul li a{width:204px; height:22px; line-height:22px; padding:0 10px; border-bottom:1px solid #181818; text-indent:0; color:#fff; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:11px}
+#accordion ul li a:hover{background:#e01f26; display:block}
+#accordion ul li a.last{border-bottom:none}
+
+.footer {width:45%; text-align:center; font-size:10px;  right:8%; color:#4d4a4a; position:absolute; float:left; bottom:2%; right:0; margin:0;}
+.footer a {font-size:11px; text-decoration:none; color:#4d4a4a;}
+.footer a:hover {font-size:11px; text-decoration:none; color:#4d4a4a;}
+
+/* inner page */
+.innermain {width:100%; float:left;}
+.innerwrap {width:800px; margin:0 auto;  }
+.contentmain {width:800px; float:left; margin:25% 0 0 0; background:#fff; padding:20px; border:1px solid #ccc6c6; height:350px; overflow-x:hidden;  overflow-y:scroll; }
+.contentmain  h1 {width:800px; float:left; margin:0 0 8px 0; color:#e01f26; font-size:21px; font-weight:bold;}
+.contentmain  h2 {width:800px; float:left; margin:0 0 8px 0; color:#181818; font-size:15px; font-weight:bold;}
+.contentmain  p {width:800px; float:left; margin:0 0 8px 0; color:#4c4949; font-size:12px; font-weight:normal;}
+.footlink {width:100%; text-align:center; color:#4d4a4a; font-size:10px; margin:1% 0 0 0; float:left; }
+.footlink a {font-size:11px; text-decoration:none; color:#4d4a4a;}
+.footlink a:hover {font-size:11px; text-decoration:none; color:#4d4a4a;}
+.contactleft {width:500px; float:left; margin:0 20px 0 0 0;}
+.formrow {width:480px; float:left; padding:0 0 5px 0; margin:0 0 5px 0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.formrow label {width:120px; float:left; margin:5px 0 0 0; color:#4c4949;}
+.formrow input[type=text] {padding:7px; width:300px; color:#000; border:1px solid #4c4949; font-size:12px;}
+.formrow input:focus[type=text] {padding:7px; width:300px; color:#000; border:1px solid #666; font-size:12px;}
+.formrow select {padding:7px; width:315px; color:#000; border:1px solid #4c4949; font-size:12px;}
+.formrow select:focus {padding:7px; width:315px; color:#000; border:1px solid #666; font-size:12px;}
+.formrow input[type=submit] {background:#E01F26; height:30px; width:315px; line-height:30px; color:#fff; text-decoration:none; cursor:pointer; font-weight:bold; font-size:15px; border:none; font-family:Century Gothic, Arial, Helvetica, sans-serif;}
+.formrow input:hover[type=submit] {background:#E01F26; height:30px; width:315px; line-height:30px; color:#fff; text-decoration:none; cursor:pointer; font-weight:bold; font-size:15px; border:none; font-family:Century Gothic, Arial, Helvetica, sans-serif;}

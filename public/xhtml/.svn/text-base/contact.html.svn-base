@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ziparama</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script>
+	
+	$(document).ready(function () {
+		
+		$('#accordion a.item').click(function () {
+
+			//slideup or hide all the Submenu
+			$('#accordion li').children('ul').slideUp('fast');	
+			
+			//remove all the "Over" class, so that the arrow reset to default
+			$('#accordion a.item').each(function () {
+				if ($(this).attr('rel')!='') {
+					$(this).removeClass($(this).attr('rel') + 'Over');	
+				}
+			});
+			
+			//show the selected submenu
+			$(this).siblings('ul').slideDown('fast');
+			
+			//add "Over" class, so that the arrow pointing down
+			$(this).addClass($(this).attr('rel') + 'Over');			
+
+			return false;
+
+		});
+	
+	});
+	
+	</script>
+</head>
+
+<body>
+
+
+<div class="navigation">
+<div class="ziplogoleft"><a href="#" title="Ziparama"><img src="images/ziplogo1.png" border="0" alt="" /></a></div>
+<div class="nav">
+<ul>
+<li><a href="#">HOW&nbsp;IT&nbsp;WORKS</a></li>
+<li><a href="#">VIEW&nbsp;MAP</a></li>
+<li><a href="#">FAQ'S</a></li>
+<li><a href="#">TERMS&nbsp;OF&nbsp;USE</a></li>
+<li><a href="#" class="active">CONTACT&nbsp;US</a></li>
+</ul>
+</div>
+<div class="social">
+<a href="#"><img src="images/googleplay.png" border="0" alt="" /></a>
+<a href="#"><img src="images/facebook.png" border="0" alt="" /></a>
+<a href="#"><img src="images/twitter.png" border="0" alt="" /></a>
+<a href="#"><img src="images/linkedin.png" border="0" alt="" /></a>
+<a href="#"><img src="images/space.png" border="0" alt="" /></a>
+<a href="#"><img src="images/youtube.png" border="0" alt="" /></a>
+</div>
+</div>
+
+<div class="innermain">
+<div class="innerwrap">
+<div class="contentmain">
+<h1>CONTACT US</h1>
+<h2>drop me a line...</h2>
+<div class="contactleft">
+<div class="formrow"><label>Name</label><input type="text" name="text" /></div>
+<div class="formrow"><label>Phone</label><input type="text" name="text" /></div>
+<div class="formrow"><label>Email</label><input type="text" name="text" /></div>
+<div class="formrow"><label>Country</label><select><option>--- Select any ---</option></select></div>
+<div class="formrow subbordernone"><label>&nbsp;</label><input type="submit" value="submit" title="submit" /></div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div class="footlink">Copyright © 2013 All Rights Reserved. www.ziparama.com | <a href="#">Terms of use</a>  | Site designed & developed by <a href="#">SofteElixir</a></div>
+
+</body>
+</html>

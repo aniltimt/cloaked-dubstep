@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <title>- :: - <%= ADMIN_SITE_TITLE %> - :: -</title>
+  <link href="/admin/css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="/admin/css/login.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="/javascripts/ckeditor/ckeditor.js"></script>
+</head>
+<body> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31402524-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" class="main-bg"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" class="header-bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="14" valign="top"></td>
+              </tr>
+              <tr>
+                <td height="79" valign="middle">
+                  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td valign="top"><h1 style="color:#FFFFFF; font-family:Geneva, Arial, Helvetica, sans-serif;"><%= ADMIN_SITE_TITLE %></h1></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="36" valign="middle"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="right" valign="top" class="heading1"><!--S3 Socializer V 1.0--></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="10" valign="middle"></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td class="height8"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top" class="header-img5"></td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="top" class="header-img5"></td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <%= yield %>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" class="footer-bg"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="center" class="footer-text"><%= SITE_PATH %></td>
+              </tr>
+
+            </table></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td></tr></table>
+</body>
+</html>

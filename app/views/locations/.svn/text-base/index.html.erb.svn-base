@@ -1,0 +1,150 @@
+<div class="innermain">
+  <div class="innerwrap">
+    <div class="contentmain" id ="map_update_div" style="height: 296px;">
+      <h1>My Pins</h1>
+      <div class="contactleft">
+        <table style="width: 100%;">
+          <tr>
+            <th style="text-align:left;" >Pin Title</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <% @locations.each do |location| %>
+            <tr>
+              <td><%= location.title %></td>
+              <td><%= link_to 'Edit', edit_location_path(location) %>&nbsp;</td>
+              <td>&nbsp;<%= link_to 'Remove', location, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+    
+  </div>
+  <div class="contentmainnew" style="margin-top: 0px;height: 550px;">
+       <a href="http://ipligence.com"><img src="http://www.ipligence.com/freetools/iplocation/b1/" alt="geolocation database" /></a>
+       <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places"></script>
+       <script type="text/javascript">
+         var placeSearch,autocomplete;
+       
+         function initialize() {
+           autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {types: [ 'geocode' ] });
+           google.maps.event.addListener(autocomplete, 'place_changed', function() {
+             var place = autocomplete.getPlace();
+             if (place.geometry.viewport) {
+             Gmaps.map.map.fitBounds(place.geometry.viewport);
+             } 
+           });
+         }
+           
+         function geolocate() {
+           if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(function(position) {
+               var geolocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+               autocomplete.setBounds(new google.maps.LatLngBounds(geolocation, geolocation));
+             });
+           }
+         }
+       </script>
+       <style>
+       body {
+         font-family: sans-serif;
+         margin: 0px;
+         padding: 0px;
+       }
+       #locationField, #controls {
+         position: relative;
+         width: 480px;
+       }
+       #autocomplete {
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         width: 100%;
+       }
+       </style> 
+<br />
+      <body onload="initialize()">
+       <div id="locationField" style="margin-top: 0px;height: 35px;">
+         <input id="autocomplete" placeholder="Search for a Place" onFocus="geolocate()" type="text" style="width: 350px; padding: 4px; border: 1px solid red"></input>
+       </div>
+      </body>
+      <h1>Zoom into map and double-click to add your pin details</h1>
+        <%= gmaps(:markers => {:data => @json, :options => { :draggable => true ,:raw => '{ animation: google.maps.Animation.DROP }' } },:map_options => { :libraries => ["places"],:type => 'HYBRID',:auto_adjust => false, :auto_zoom => false, :zoom => 2,:raw => '{ disableDefaultUI: false,draggable: true, scrollwheel: true,disableDoubleClickZoom: true, zoomControl: true,zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, scaleControl: true, panControl  :true, panControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER} ,streetViewControl:true}' }) %>
+      
+    </div>
+</div>
+
+  
+
+<%#= gmaps("markers" => {"data" => @json, "options" => { "draggable" => true  } } ) %> 
+ 
+<% content_for :scripts do %>
+<script type="text/javascript" charset="utf-8">
+
+Gmaps.map.HandleDragend = function(pos,title) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({
+    latLng: pos
+  }, function(responses) {
+    if (responses && responses.length > 0) {
+      //alert(responses[0].formatted_address);
+      var latitude = pos.lat();
+      var longitude = pos.lng();      
+      var address = responses[0].formatted_address
+      $.ajax({
+        type: "PUT",
+        url: "/locations/update/" + title +"?dynamic=1&longitude=" + longitude + '&latitude=' + latitude + '&address=' + address,
+        success: function() {
+          //alert('location updated');
+        },    
+      });
+    } else {
+      alert('Cannot determine address at this location.');
+    }
+  });
+};
+function placeMarker(latLng) {
+  var marker = new google.maps.Marker({
+    position: latLng, 
+    map: Gmaps.map.serviceObject,
+    draggable: true
+  });
+  // Listen to drag & drop
+  google.maps.event.addListener(marker, 'dragend', function() { Gmaps.map.HandleDragend(this.getPosition(),$("#object_id_location").val()) });
+  }
+Gmaps.map.callback = function() {
+  for (var i = 0; i <  this.markers.length; ++i) {
+     google.maps.event.addListener(Gmaps.map.markers[i].serviceObject, 'dragend', function() { Gmaps.map.HandleDragend(this.getPosition(),this.title) });
+  }
+  // On double click,place a new marker on map , create enrty in  database
+  google.maps.event.addListener(Gmaps.map.serviceObject, 'dblclick', function(event) {
+    
+    var geocoder = new google.maps.Geocoder();
+     geocoder.geocode({
+      latLng: event.latLng
+    }, function(responses) {  
+      var latitude = event.latLng.lat();
+      var longitude = event.latLng.lng(); 
+      var address = responses[0].formatted_address
+      //alert(address);
+      var location_lenght = $('#location_category_id').length;
+      if(location_lenght == 0){
+        $.ajax({
+          type: "post",
+          url: "/locations/create/" +"?dynamic=1&longitude=" + longitude + '&latitude=' + latitude + '&address=' + address  ,
+          success: function(data) {
+            $("#map_update_div").html(data);
+          },    
+        });
+        placeMarker(event.latLng);
+      }else{
+        alert("Please complete details of your first pin");
+      }
+    });
+    
+    //Gmaps.map.HandleNewlocation(event.latLng);
+  });
+};        
+</script>
+<% end %>
